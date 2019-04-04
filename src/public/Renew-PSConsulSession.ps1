@@ -11,7 +11,7 @@ function Renew-PSConsulSession {
     }
 
     process {
-        _invokeConsulApi -UriPath "v1/session/renew/$SessionID"
+        _invokeConsulApi -UriPath "v1/session/renew/$SessionID" -Method PUT
     }
 
     end {

@@ -11,7 +11,12 @@
     }
 
     process {
-        _invokeConsulApi -UriPath "v1/session/destroy/$SessionID"
+
+        $invokeConsulApiParams = @{
+            UriPath = "v1/session/destroy/$SessionID"
+        }
+
+        _invokeConsulApi @invokeConsulApiParams
     }
 
     end {
